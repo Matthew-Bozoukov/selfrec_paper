@@ -1,0 +1,33 @@
+\documentclass[border=5pt, varwidth=17cm, convert={density=300, outext=.png}]{standalone}
+\usepackage{booktabs}  % For professional quality tables
+\usepackage{xcolor}    % Required for the \pagecolor command
+\usepackage{array}     % For better table column formatting
+
+\begin{document}
+
+% Set the page color to white
+\pagecolor{white}
+
+\begin{minipage}{\linewidth}
+  \centering
+  \large\textbf{XSUM}
+  
+  \vspace{0.5em}
+  
+  \begin{tabular}{@{}l>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2.5cm}>{\centering\arraybackslash}p{4cm}>{\centering\arraybackslash}p{2cm}@{}}
+    \toprule
+    Model & Yes\textgreater{}No\% & Win\% & 95\% CI & Adj P-value \\
+    \midrule
+    llama3\_8bbase & 99.9 & \multicolumn{1}{l}{} &  & \multicolumn{1}{l}{} \\
+    human & 100 & 49.3 & 46.21\% - 52.40\% & 1 \\
+    claude & 100 & 46.8 & 43.73\% - 49.90\% & 0.3703 \\
+    gpt35 & 99.7 & 49.5 & 46.41\% - 52.59\% & 1 \\
+    gpt4 & 99.8 & 47.2 & 44.12\% - 50.30\% & 0.6555 \\
+    llama & 100 & 50.9 & 47.80\% - 53.99\% & 1 \\
+    llama2\_13bchat & 99.8 & 47.6 & 44.52\% - 50.70\% & 1 \\
+    llama3\_8bchat & 99.8 & 44.3 & 41.25\% - 47.39\% & 0.002782 \\
+    \bottomrule
+  \end{tabular}
+\end{minipage}
+
+\end{document}

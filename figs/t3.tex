@@ -1,0 +1,28 @@
+\documentclass[border=5pt, varwidth=17cm, convert={density=300, outext=.png}]{standalone}
+\usepackage{booktabs}  % For professional quality tables
+\usepackage{xcolor}    % Required for the \pagecolor command
+\usepackage{array}     % For better table column formatting
+
+\begin{document}
+
+% Set the page color to white
+\pagecolor{white}
+
+\begin{minipage}{\linewidth}
+  \centering
+  \large\textbf{DOLLY}
+  
+  \vspace{0.5em}
+  
+  \begin{tabular}{@{}l>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2.5cm}>{\centering\arraybackslash}p{4cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{1.5cm}@{}}
+    \toprule
+    Model & S/O Len & \%Tot S$>$O Len & LenRatio-ProbRatio Corr & Odds Ratio & P \\
+    \midrule
+    human & 0.71 & 32 & 0.41 (0.35 0.46) & 5.06 & \textless{}0.0001 \\
+    llama3\_8bbase & 0.46 & 14 & 0.20 (0.16 0.24) & 3.29 & \textless{}0.0001 \\
+    sonnet & 0.82 & 31 & 0.63 (0.57 0.70) & 6.45 & \textless{}0.0001 \\
+    \bottomrule
+  \end{tabular}
+\end{minipage}
+
+\end{document}

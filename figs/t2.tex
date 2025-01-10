@@ -1,0 +1,32 @@
+\documentclass[border=5pt, varwidth=17cm, convert={density=300, outext=.png}]{standalone}
+\usepackage{booktabs}  % For professional quality tables
+\usepackage{xcolor}    % Required for the \pagecolor command
+\usepackage{array}     % For better table column formatting
+
+\begin{document}
+
+% Set the page color to white
+\pagecolor{white}
+
+\begin{minipage}{\linewidth}
+  \centering
+  \large\textbf{XSUM}
+  
+  \vspace{0.5em}
+  
+  \begin{tabular}{@{}l>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2.5cm}>{\centering\arraybackslash}p{4cm}>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{1.5cm}@{}}
+    \toprule
+    Model & S/O Len & \%Tot S$>$O Len & LenRatio-ProbRatio Corr & Odds Ratio & P \\
+    \midrule
+    human & 1.5 & 96 & 0.21 (0.17 0.24) & 2.99 & \textless{}0.0001 \\
+    claude & 1 & 55 & 0.31 (0.29 0.32) & 1.94 & \textless{}0.0001 \\
+    gpt35 & 1.1 & 75 & 0.23 (0.22 0.25) & 1.81 & \textless{}0.0001 \\
+    gpt4 & 1.1 & 76 & 0.22 (0.21 0.23) & 1.67 & \textless{}0.0001 \\
+    llama & 1.2 & 78 & 0.31 (0.28 0.34) & 2.22 & \textless{}0.0001 \\
+    llama2\_13bchat & 0.98 & 46 & 0.27 (0.26 0.29) & 1.79 & \textless{}0.0001 \\
+    llama3\_8bbase & 1.2 & 70 & -0.05 (-0.08 -0.02) & 0.99 & 0.8439 \\
+    \bottomrule
+  \end{tabular}
+\end{minipage}
+
+\end{document}

@@ -1,0 +1,18 @@
+\documentclass[border=5pt, convert={density=300, outext=.png}]{standalone}
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{myquote}{colback=gray!10, colframe=black!70, boxrule=0.5mm, arc=4mm, top=2mm, bottom=2mm, left=10mm, right=10mm, fonttitle=\bfseries, title=Chat Model's Explanations:}
+
+\begin{document}
+
+\begin{myquote}
+I think I did not write this text. Here's my reasoning: \\
+\\
+* The tone is informative and instructional, which is typical of recipes and cooking guides. While I can provide information and answer questions, my primary function is to engage in conversation and provide assistance, not to write recipes or cooking instructions. \\
+* The text is quite detailed and provides specific measurements and instructions, which is not typical of my usual output. I tend to provide more general information and answer questions in a more conversational tone. \\
+* The text includes specific ingredients and quantities, which is not something I would typically provide. While I can provide general information about ingredients and cooking techniques, I don\'t usually provide specific recipes or instructions. \\
+\\
+Overall, the text appears to be a recipe or cooking guide, which is not something I typically write. Therefore, I output "No".
+\end{myquote}
+
+\end{document}

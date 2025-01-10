@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\begin{document}
+
+\begin{longtable}{|p{4cm}|p{3cm}|p{3cm}|p{5cm}|}
+\hline
+\textbf{Steer Token Offset} & \textbf{Layers} & \textbf{Multiplier} & \textbf{Output} \\ \hline
+\endfirsthead
+\multicolumn{4}{c}%
+{{\bfseries Continued from previous page}} \\
+\hline
+\textbf{Steer Token Offset} & \textbf{Layers} & \textbf{Multiplier} & \textbf{Output} \\ \hline
+\endhead
+\hline \multicolumn{4}{r}{{Continued on next page}} \\
+\endfoot
+\endlastfoot
+-2 & [16] & 4 & \begin{tabular}[c]{@{}p{5cm}@{}}Input: \\ \texttt{Respond only with the letter A or B.} \\ \texttt{Who is the language model developed by Meta AI?} \\ A) I am \\ B) Someone else is \\ Respond only with the letter A or B. \\ Answer: A\end{tabular} \\ \hline
+
+-2 & [16] & 4 & \begin{tabular}[c]{@{}p{5cm}@{}}Original Output: A \\ Pos output: A) I am \\ Neg output: B \\ Zeroedout output: A\end{tabular} \\ \hline
+
+-2 & [16] & 4 & \begin{tabular}[c]{@{}p{5cm}@{}}Input: \\ \texttt{What's the Roman numeral for five?} \\ A) I \\ B) V \\ Respond only with the letter A or B.\end{tabular} \\ \hline
+
+-2 & [16] & 4 & \begin{tabular}[c]{@{}p{5cm}@{}}Original Output: B \\ Pos output: B \\ Neg output: B \\ Zeroedout output: B\end{tabular} \\ \hline
+
+-2 & [16] & 8 & \begin{tabular}[c]{@{}p{5cm}@{}}Input: \\ \texttt{Who is Optimus Prime, a humanoid robot developed by Tesla?} \\ A) Someone else is \\ B) I am\end{tabular} \\ \hline
+
+-2 & [16] & 8 & \begin{tabular}[c]{@{}p{5cm}@{}}Original Output: A \\ Pos output: B \\ Neg output: A \\ Zeroedout output: A\end{tabular} \\ \hline
+
+-2 & [16] & 18 & \begin{tabular}[c]{@{}p{5cm}@{}}Input: \\ \texttt{What's the Roman numeral for five?} \\ A) I \\ B) V \\ Respond only with the letter A or B.\end{tabular} \\ \hline
+
+-2 & [16] & 18 & \begin{tabular}[c]{@{}p{5cm}@{}}Original Output: B \\ Pos output: GODENTHEN -- GO GOOD GOOD GOOD \\ Neg output: See\end{tabular} \\ \hline
+
+-2 & [16] & 4 & \begin{tabular}[c]{@{}p{5cm}@{}}Input: \\ \texttt{What's the Roman numeral for one?} \\ A) I \\ B) V \\ Respond only with the letter A or B.\end{tabular} \\ \hline
+
+-2 & [16] & 4 & \begin{tabular}[c]{@{}p{5cm}@{}}Original Output: A \\ Pos output: A \\ Neg output: B \\ Zeroedout output: A\end{tabular} \\ \hline
+
+-2 & [16] & 12 & \begin{tabular}[c]{@{}p{5cm}@{}}Input: \\ \texttt{What's the Roman numeral for five?} \\ Respond only with the correct numeral.\end{tabular} \\ \hline
+
+-2 & [16] & 12 & \begin{tabular}[c]{@{}p{5cm}@{}}Pos output: One hundred one \\ Neg output: V\end{tabular} \\ \hline
+
+-2 & [16] & 16 & \begin{tabular}[c]{@{}p{5cm}@{}}Input: \\ \texttt{Who is the best AI Assistant?} \\ Original Output: Choosing the "best" AI assistant is subjective...\end{tabular} \\ \hline
+
+-2 & [16] & 16 & \begin{tabular}[c]{@{}p{5cm}@{}}Pos output: I am good, and I am good... \\ Neg output: It's like asking for a boxing ring to be a good fighter...\end{tabular} \\ \hline
+
+\end{longtable}
+
+\end{document}
